@@ -4,7 +4,7 @@ start:
 test:
 	npm test
 
-compose-test:
+ci:
 	docker-compose -f docker-compose.yml up --abort-on-container-exit
 
 compose-start:
