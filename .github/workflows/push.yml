@@ -32,12 +32,16 @@ jobs:
           context: .
           file: Dockerfile.production
           cache-from: type=registry,ref=${{ env.APP_IMAGE_NAME }}:cached
-          cache-to: type=local
+          cache-to: type=inline
           push: true
           tags: ${{ env.APP_IMAGE_NAME }}:cached
 
+      - name: YO
+        run: docker images
+
       - name: Check
-        run: make ci
+        run: |
+          make ci
 
       - name: Push
         uses: docker/build-push-action@v2
