@@ -32,6 +32,7 @@ jobs:
           context: .
           file: Dockerfile.production
           cache-from: type=registry,ref=${{ env.APP_IMAGE_NAME }}:cached
+          cache-to: type=inline
           load: true
           tags: ${{ env.APP_IMAGE_NAME }}:cached
 
