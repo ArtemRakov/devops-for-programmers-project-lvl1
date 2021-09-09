@@ -10,15 +10,15 @@ services:
       dockerfile: Dockerfile
     command: npm start
     ports:
-      - "8080:8080"
+      - 8080:8080
     volumes:
       - ./app:/app
 
   caddy:
     image: caddy:2.4.5-alpine
     ports:
-      - "80:80"
-      - "443:443"
+      - 80:80
+      - 443:443
     volumes:
       - ./services/caddy/Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data

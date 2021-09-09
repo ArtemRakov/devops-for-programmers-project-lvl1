@@ -6,7 +6,7 @@ compose:
 	docker-compose up
 
 setup:
-	cp -n .env.example .env || true
+	cp -n app/.env.example app/.env || true
 	docker-compose run app npm install
 
 .PHONY: test

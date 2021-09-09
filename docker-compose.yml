@@ -6,7 +6,6 @@ services:
   app:
     image: scoff1k/devops-for-programmers-project-lvl1:cached
     command: npm test
-    env_file: .env.example
     depends_on:
       - db
 
