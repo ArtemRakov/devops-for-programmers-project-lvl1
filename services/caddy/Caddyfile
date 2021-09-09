@@ -1,4 +1,4 @@
-localhost, ru.code-basics.test {
+localhost {
   log {
     format single_field common_log
   }
