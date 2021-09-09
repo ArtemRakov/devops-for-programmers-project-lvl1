@@ -45,6 +45,8 @@ jobs:
         with:
           context: .
           file: Dockerfile.production
-          cache-from: type=registry,ref=${{ env.APP_IMAGE_NAME }}:cached
+          cache-from: ${{ env.APP_IMAGE_NAME }}:cached
           push: true
-          tags: ${{ env.APP_IMAGE_NAME }}:latest
+          tags: |
+            - ${{ env.APP_IMAGE_NAME }}:latest
+            - ${{ env.APP_IMAGE_NAME }}:cached
