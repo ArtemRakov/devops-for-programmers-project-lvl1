@@ -34,6 +34,7 @@ jobs:
           cache-from: type=registry,ref=${{ env.APP_IMAGE_NAME }}:cached
           cache-to: type=inline
           push: true
+          load: true
           tags: ${{ env.APP_IMAGE_NAME }}:cached
 
       - name: YO
