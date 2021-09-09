@@ -1,4 +1,5 @@
 ci:
+	cp -n .env.example .env || true
 	docker-compose -f docker-compose.yml up --abort-on-container-exit
 
 compose:
