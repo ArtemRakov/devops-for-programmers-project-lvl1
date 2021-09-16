@@ -1,5 +1,5 @@
 copy-env:
-	cp -n app/.env.example app/.env || true
+	cp -n app/.env.example app/.env
 
 ci:
 	make copy-env

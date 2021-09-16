@@ -10,6 +10,7 @@ env:
   BUILDKIT_INLINE_CACHE: 1
   COMPOSE_DOCKER_CLI_BUILD: 1
   DOCKER_BUILDKIT: 1
+  PROJECT_NAME_IMAGE: devops-for-programmers-project-lvl1_app
 
 jobs:
   build:
@@ -34,7 +35,7 @@ jobs:
           cache-from: type=registry,ref=${{ env.APP_IMAGE_NAME }}:cached
           cache-to: type=inline
           load: true
-          tags: ${{ env.APP_IMAGE_NAME }}:cached
+          tags: ${{ env.PROJECT_NAME_IMAGE }}
 
       - name: Check
         run: |
